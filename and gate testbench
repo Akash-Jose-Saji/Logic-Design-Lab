@@ -1,1 +1,26 @@
-
+module t_andgate;
+  wire y;
+  reg a,b;
+  andgate t_andgate(y,a,b);
+  initial
+    begin
+      $dumpfile("dump.vcd");
+      $dumpvars;
+      #50
+      $finish;
+    end
+  initial
+    begin
+      a=1'b0;
+      b=1'b0;
+      #5
+       a=1'b0;
+      b=1'b1;
+      #5
+       a=1'b1;
+      b=1'b0;
+      #5
+       a=1'b1;
+      b=1'b1;
+    end 
+endmodule
