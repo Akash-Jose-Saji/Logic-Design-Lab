@@ -1,1 +1,4 @@
+module andgate(output y,input a,input b);
+  and(y,a,b);
+endmodule
 
